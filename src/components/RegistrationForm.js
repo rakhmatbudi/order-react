@@ -49,11 +49,10 @@ const RegistrationForm = ({ onRegistrationComplete }) => {
             <img 
               src="/images/logos/logo-light.svg" 
               alt="Serendipity Restaurant Logo" 
-              className="h-48 mb-4 mx-auto md:mx-0"
+              className="h-36 mb-0 mx-auto md:mx-0"
             />
           </div>
           <h2 className="text-2xl font-bold mb-2">Ordering System</h2>
-          <p className="text-gray-300">Silakan daftar terlebih dahulu.</p>
         </div>
       </div>
 
@@ -64,6 +63,18 @@ const RegistrationForm = ({ onRegistrationComplete }) => {
             type="text"
             name="name"
             value={formData.name}
+            onChange={handleInputChange}
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">No Telepon:</label>
+          <input
+            type="tel"
+            name="phone"
+            value={formData.phone}
             onChange={handleInputChange}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             required
@@ -82,17 +93,7 @@ const RegistrationForm = ({ onRegistrationComplete }) => {
           />
         </div>
         
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">Phone:</label>
-          <input
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleInputChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            required
-          />
-        </div>
+        
 
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Nomor Meja:</label>
@@ -119,7 +120,7 @@ const RegistrationForm = ({ onRegistrationComplete }) => {
             </div>
           ) : (
             <>
-              <span>Daftar</span>
+              <span>Lanjut</span>
               <CheckCircle className="ml-2" size={20} />
             </>
           )}
