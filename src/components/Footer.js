@@ -10,7 +10,7 @@ const Footer = () => {
             <img 
               src="/images/logos/logo-light.svg" 
               alt="Serendipity Restaurant Logo" 
-              className="h-12 mb-4 mx-auto md:mx-0"
+              className="h-48 mb-4 mx-auto md:mx-0"
             />
           </div>
           <div>

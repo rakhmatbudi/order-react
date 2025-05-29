@@ -5,7 +5,8 @@ const RegistrationForm = ({ onRegistrationComplete }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: ''
+    phone: '',
+    tableNumber: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -21,7 +22,7 @@ const RegistrationForm = ({ onRegistrationComplete }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim()) {
+    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim() || !formData.tableNumber.trim()) {
       alert('Please fill in all fields');
       return;
     }
@@ -44,11 +45,15 @@ const RegistrationForm = ({ onRegistrationComplete }) => {
           }}
         ></div>
         <div className="relative text-center">
-          <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Bookmark className="text-white" size={32} />
+          <div className="text-center md:text-left">
+            <img 
+              src="/images/logos/logo-light.svg" 
+              alt="Serendipity Restaurant Logo" 
+              className="h-48 mb-4 mx-auto md:mx-0"
+            />
           </div>
-          <h2 className="text-2xl font-bold mb-2">Registrasi</h2>
-          <p className="text-gray-300">Silakan daftarkan kontak anda.</p>
+          <h2 className="text-2xl font-bold mb-2">Ordering System</h2>
+          <p className="text-gray-300">Silakan daftar terlebih dahulu.</p>
         </div>
       </div>
 
@@ -84,6 +89,19 @@ const RegistrationForm = ({ onRegistrationComplete }) => {
             name="phone"
             value={formData.phone}
             onChange={handleInputChange}
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">Nomor Meja:</label>
+          <input
+            type="text"
+            name="tableNumber"
+            value={formData.tableNumber}
+            onChange={handleInputChange}
+            placeholder="Contoh: A1, B5, 12"
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             required
           />
