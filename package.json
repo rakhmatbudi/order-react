@@ -1,8 +1,8 @@
 {
-  "name": "soup-restaurant-app",
+  "name": "restaurant-ordering-app",
   "version": "1.0.0",
   "private": true,
-  "description": "A modern restaurant ordering application with registration flow",
+  "description": "A modern restaurant ordering application",
   "dependencies": {
     "lucide-react": "^0.263.1",
     "react": "^18.2.0",
@@ -49,6 +49,6 @@
     "cart",
     "checkout"
   ],
-  "author": "Your Name",
+  "author": "Rakhmat",
   "license": "MIT"
 }

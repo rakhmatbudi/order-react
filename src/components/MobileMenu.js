@@ -18,12 +18,6 @@ const MobileMenu = ({ isOpen, onClose, currentPage, onNavigate, userRegistered }
         </div>
         <nav className="p-4">
           <div className="space-y-4">
-            <button 
-              onClick={() => { onNavigate('landing'); onClose(); }}
-              className={`block w-full text-left hover:text-gray-900 ${currentPage === 'landing' ? 'text-gray-900 font-semibold' : 'text-gray-700'}`}
-            >
-              Home
-            </button>
             {userRegistered && (
               <button 
                 onClick={() => { onNavigate('menu'); onClose(); }}
@@ -32,8 +26,8 @@ const MobileMenu = ({ isOpen, onClose, currentPage, onNavigate, userRegistered }
                 Menu
               </button>
             )}
-            <a href="#" className="block text-gray-700 hover:text-gray-900">About</a>
-            <a href="#" className="block text-gray-700 hover:text-gray-900">Contact</a>
+            <a href="#" className="block text-gray-700 hover:text-gray-900">FAQ</a>
+            <a href="#" className="block text-gray-700 hover:text-gray-900">Tentang Kami</a>
           </div>
         </nav>
         <div className="absolute bottom-4 left-4 right-4">

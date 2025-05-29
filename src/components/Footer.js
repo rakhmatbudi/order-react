@@ -14,7 +14,6 @@ const Footer = () => {
             />
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-gray-300">Latest News</h3>
             <div className="space-y-3">
               <div>
                 <a href="#" className="text-white hover:text-gray-300 text-sm block">

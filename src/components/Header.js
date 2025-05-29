@@ -19,12 +19,6 @@ const Header = ({ cartItems, onCartToggle, onMobileMenuToggle, currentPage, onNa
                 Serendipity
               </button>
               <nav className="hidden lg:flex space-x-6">
-                <button 
-                  onClick={() => onNavigate('landing')}
-                  className={`hover:text-gray-900 ${currentPage === 'landing' ? 'text-gray-900 font-semibold' : 'text-gray-700'}`}
-                >
-                  Home
-                </button>
                 {userRegistered && (
                   <button 
                     onClick={() => onNavigate('menu')}
@@ -33,8 +27,13 @@ const Header = ({ cartItems, onCartToggle, onMobileMenuToggle, currentPage, onNa
                     Menu
                   </button>
                 )}
+                <button 
+                  onClick={() => onNavigate('faq')}
+                  className={`hover:text-gray-900 ${currentPage === 'faq' ? 'text-gray-900 font-semibold' : 'text-gray-700'}`}
+                >
+                  FAQ
+                </button>
                 <a href="#" className="text-gray-700 hover:text-gray-900">About</a>
-                <a href="#" className="text-gray-700 hover:text-gray-900">Contact</a>
               </nav>
             </div>
             <div className="flex items-center space-x-4">
@@ -67,27 +66,35 @@ const Header = ({ cartItems, onCartToggle, onMobileMenuToggle, currentPage, onNa
         </div>
       </header>
 
-      {/* Mobile Header */}
-      <header className="md:hidden bg-white shadow-sm sticky top-0 z-50">
-        <div className="flex items-center justify-between px-4 py-3">
-          <button onClick={onMobileMenuToggle} className="text-gray-700">
-            <Menu size={24} />
-          </button>
-          <img 
-            src="/images/logos/logo-horizontal-dark.svg" 
-            alt="Serendipity Restaurant Logo" 
-            className="h-24"
-          />
-          {userRegistered && (
-            <button onClick={onCartToggle} className="relative text-gray-700">
-              <ShoppingCart size={24} />
-              {cartCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">
-                  {cartCount}
-                </span>
-              )}
+      {/* Mobile Header - Fixed Height */}
+      <header className="md:hidden bg-white shadow-sm sticky top-0 z-50 h-16">
+        <div className="flex items-center justify-between h-full px-4">
+          <div className="flex items-center justify-center w-12 h-12">
+            <button onClick={onMobileMenuToggle} className="text-gray-700 p-2">
+              <Menu size={24} />
             </button>
-          )}
+          </div>
+          
+          <div className="flex-1 flex justify-center items-center px-4">
+            <img 
+              src="/images/logos/logo-horizontal-dark.svg" 
+              alt="Serendipity Restaurant Logo" 
+              className="max-h-36 max-w-full object-contain"
+            />
+          </div>
+          
+          <div className="flex items-center justify-center w-12 h-12">
+            {userRegistered && (
+              <button onClick={onCartToggle} className="relative text-gray-700 p-2">
+                <ShoppingCart size={24} />
+                {cartCount > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">
+                    {cartCount}
+                  </span>
+                )}
+              </button>
+            )}
+          </div>
         </div>
       </header>
     </>

@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import LandingPage from './components/LandingPage';
 import MenuPage from './components/MenuPage';
 import CheckoutPage from './components/CheckoutPage';
+import FAQPage from './components/FAQPage';
 import CartPanel from './components/CartPanel';
 import MobileMenu from './components/MobileMenu';
 import { menuData } from './data/menuData';
@@ -76,7 +77,7 @@ const RestaurantApp = () => {
   };
 
   const handleOrderComplete = (formData) => {
-    alert(`Thank you! Your order has been placed successfully. You will receive a confirmation email shortly.`);
+    alert(`Pesanan sudah kami terima dan akan segera kami antar. Terimakasih!`);
     setCartItems([]);
     navigate('menu');
   };
@@ -107,6 +108,9 @@ const RestaurantApp = () => {
             onOrderComplete={handleOrderComplete}
           />
         );
+
+      case 'faq':
+        return <FAQPage />;
 
       default:
         return null;
