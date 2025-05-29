@@ -1,9 +1,25 @@
 import React from 'react';
 
 const MenuItem = ({ item, onAddToCart }) => {
+  // Generate image path based on item ID
+  const getProductImage = (itemId) => {
+    return `/images/product/product-${itemId}.jpg`;
+  };
+
   return (
     <div className="bg-white rounded-lg shadow-sm overflow-hidden flex">
-      <img src={item.image} alt={item.name} className="w-32 h-32 object-cover flex-shrink-0" />
+      {/* Hidden item ID for reference */}
+      <span className="hidden">{item.id}</span>
+      
+      <img 
+        src={getProductImage(item.id)} 
+        alt={item.name} 
+        className="w-32 h-32 object-cover flex-shrink-0"
+        onError={(e) => {
+          // Fallback to placeholder or original item.image if product image doesn't exist
+          e.target.src = item.image || '/api/placeholder/300/200';
+        }}
+      />
       <div className="p-4 flex-1 flex flex-col justify-between">
         <div>
           <h3 className="font-semibold text-gray-900 mb-1">{item.name}</h3>

@@ -4,9 +4,9 @@ export const menuData = {
     { id: 1, name: 'Beef Burger', description: 'Beef, cheese, potato, onion, fries', price: 9.00, image: '/api/placeholder/300/200' },
     { id: 2, name: 'Broccoli Burger', description: 'Beef, cheese, potato, onion, fries', price: 9.00, image: '/api/placeholder/300/200' },
     { id: 3, name: 'Chicken Burger', description: 'Chicken, cheese, potato, onion, fries', price: 9.00, image: '/api/placeholder/300/200' },
-    { id: 4, name: 'Creste di Galli', description: 'Pasta, cheese, tomatoes, herbs', price: 13.00, image: '/api/placeholder/300/200' },
-    { id: 5, name: 'Chicken Wings', description: 'Crispy wings with special sauce', price: 13.00, image: '/api/placeholder/300/200' },
-    { id: 6, name: 'Nigiri-sushi', description: 'Fresh fish, seasoned rice', price: 13.00, image: '/api/placeholder/300/200' }
+    { id: 4, name: 'Salmon Burger', description: 'Pasta, cheese, tomatoes, herbs', price: 13.00, image: '/api/placeholder/300/200' },
+    { id: 5, name: 'Kebab Burger', description: 'Crispy wings with special sauce', price: 13.00, image: '/api/placeholder/300/200' },
+    { id: 6, name: 'Veggi Burger', description: 'Fresh fish, seasoned rice', price: 13.00, image: '/api/placeholder/300/200' }
   ],
   Pasta: [
     { id: 7, name: 'Spaghetti Carbonara', description: 'Pasta, eggs, cheese, bacon', price: 12.00, image: '/api/placeholder/300/200' },
