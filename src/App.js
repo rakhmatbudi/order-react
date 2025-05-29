@@ -49,7 +49,7 @@ const Header = ({ cartItems, onCartToggle, onMobileMenuToggle, currentPage, onNa
                 onClick={() => onNavigate(userRegistered ? 'menu' : 'landing')}
                 className="text-2xl font-bold text-gray-800 hover:text-gray-600"
               >
-                Soup
+                Serendipity
               </button>
               <nav className="hidden lg:flex space-x-6">
                 <button 
@@ -110,7 +110,7 @@ const Header = ({ cartItems, onCartToggle, onMobileMenuToggle, currentPage, onNa
             onClick={() => onNavigate(userRegistered ? 'menu' : 'landing')}
             className="text-xl font-bold text-gray-800"
           >
-            Soup
+            Serendipity
           </button>
           {userRegistered && (
             <button onClick={onCartToggle} className="relative text-gray-700">
@@ -583,7 +583,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage, onNavigate, userRegistered }
       <div className="absolute left-0 top-0 h-full w-64 bg-white shadow-xl">
         <div className="p-4 border-b">
           <div className="flex items-center justify-between">
-            <span className="text-xl font-bold">Soup</span>
+            <span className="text-xl font-bold">Serendipity</span>
             <button onClick={onClose} className="text-gray-500">
               <X size={24} />
             </button>
@@ -626,13 +626,18 @@ const MobileMenu = ({ isOpen, onClose, currentPage, onNavigate, userRegistered }
 };
 
 // Footer Component
+// Updated Footer Component with Logo Image
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-12 mt-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center md:text-left">
-            <div className="text-2xl font-bold mb-4">Soup</div>
+            <img 
+              src="/images/logos/logo-light.svg" 
+              alt="Serendipity Restaurant Logo" 
+              className="h-12 mb-4 mx-auto md:mx-0"
+            />
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4 text-gray-300">Latest News</h3>
@@ -672,7 +677,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400 text-sm">
-          Copyright Soup 2024©. Made with React.
+          Copyright Serendipity 2024©. Made with React.
         </div>
       </div>
     </footer>
