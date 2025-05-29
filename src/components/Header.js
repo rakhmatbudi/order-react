@@ -73,12 +73,11 @@ const Header = ({ cartItems, onCartToggle, onMobileMenuToggle, currentPage, onNa
           <button onClick={onMobileMenuToggle} className="text-gray-700">
             <Menu size={24} />
           </button>
-          <button 
-            onClick={() => onNavigate(userRegistered ? 'menu' : 'landing')}
-            className="text-xl font-bold text-gray-800"
-          >
-            Serendipity
-          </button>
+          <img 
+            src="/images/logos/logo-horizontal-dark.svg" 
+            alt="Serendipity Restaurant Logo" 
+            className="h-24"
+          />
           {userRegistered && (
             <button onClick={onCartToggle} className="relative text-gray-700">
               <ShoppingCart size={24} />

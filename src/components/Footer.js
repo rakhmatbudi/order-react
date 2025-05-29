@@ -10,7 +10,7 @@ const Footer = () => {
             <img 
               src="/images/logos/logo-light.svg" 
               alt="Serendipity Restaurant Logo" 
-              className="h-48 mb-4 mx-auto md:mx-0"
+              className="h-48 mb-0 mx-auto md:mx-0"
             />
           </div>
           <div>
@@ -18,15 +18,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div>
                 <a href="#" className="text-white hover:text-gray-300 text-sm block">
-                  How to create effective web design?
+                  Alamat
                 </a>
-                <span className="text-gray-400 text-xs">February 14, 2015</span>
+                <span className="text-gray-400 text-xs">Jalan Durian Barat III no 10, Kelurahan Jagakarsa</span>
               </div>
               <div>
                 <a href="#" className="text-white hover:text-gray-300 text-sm block">
-                  Awesome weekend in Polish mountains!
+                  Whatsapp
                 </a>
-                <span className="text-gray-400 text-xs">February 14, 2015</span>
+                <span className="text-gray-400 text-xs">082-12345-8276</span>
               </div>
             </div>
           </div>
@@ -51,7 +51,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400 text-sm">
-          Copyright Serendipity 2024©. Made with React.
+          Copyright by Serendipity ©2024.
         </div>
       </div>
     </footer>

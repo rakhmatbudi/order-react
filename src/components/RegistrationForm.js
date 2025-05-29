@@ -58,6 +58,19 @@ const RegistrationForm = ({ onRegistrationComplete }) => {
 
       <form onSubmit={handleSubmit} className="p-6 space-y-4">
         <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">Nomor Meja:</label>
+          <input
+            type="text"
+            name="tableNumber"
+            value={formData.tableNumber}
+            onChange={handleInputChange}
+            placeholder="Contoh: A1, B5, 12"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            required
+          />
+        </div>
+        
+        <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Nama:</label>
           <input
             type="text"
@@ -88,21 +101,6 @@ const RegistrationForm = ({ onRegistrationComplete }) => {
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            required
-          />
-        </div>
-        
-        
-
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">Nomor Meja:</label>
-          <input
-            type="text"
-            name="tableNumber"
-            value={formData.tableNumber}
-            onChange={handleInputChange}
-            placeholder="Contoh: A1, B5, 12"
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             required
           />
