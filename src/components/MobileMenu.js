@@ -26,7 +26,12 @@ const MobileMenu = ({ isOpen, onClose, currentPage, onNavigate, userRegistered }
                 Menu
               </button>
             )}
-            <a href="#" className="block text-gray-700 hover:text-gray-900">FAQ</a>
+            <button 
+              onClick={() => { onNavigate('faq'); onClose(); }}
+              className={`block w-full text-left hover:text-gray-900 ${currentPage === 'faq' ? 'text-gray-900 font-semibold' : 'text-gray-700'}`}
+            >
+              FAQ
+            </button>
             <a href="#" className="block text-gray-700 hover:text-gray-900">Tentang Kami</a>
           </div>
         </nav>

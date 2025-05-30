@@ -79,7 +79,7 @@ const Header = ({ cartItems, onCartToggle, onMobileMenuToggle, currentPage, onNa
             <img 
               src="/images/logos/logo-horizontal-dark.svg" 
               alt="Serendipity Restaurant Logo" 
-              className="max-h-36 max-w-full object-contain"
+              className="max-h-10 max-w-full object-contain"
             />
           </div>
           
